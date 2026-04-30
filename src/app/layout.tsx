@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Navigation } from "@/components/layout/Navigation";
 import "./globals.css";
+import { Footer } from "@/components/layout/Footer";
 
 const pretendard = localFont({
   src: "../../public/fonts/PretendardVariable.woff2",
@@ -25,13 +26,11 @@ export default function RootLayout({
       <body
         className={`min-h-full flex flex-col pt-[64px] ${pretendard.className} text-black`}
       >
-        <header>
-          <Navigation />
-        </header>
+        <Navigation />
 
-        <main>{children}</main>
+        <main className="flex-1">{children}</main>
 
-        <footer>Footer</footer>
+        <Footer />
       </body>
     </html>
   );
