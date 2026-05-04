@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
 export const useIntersection = (threshold = 0.75) => {
-  const ref = useRef<HTMLElement | null>(null);
+  const ref = useRef<HTMLDivElement | null>(null);
 
   const [isIntersecting, setIsIntersecting] = useState(false);
 
