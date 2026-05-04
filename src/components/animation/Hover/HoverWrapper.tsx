@@ -8,15 +8,17 @@ import { useIntersection } from "@/hooks";
 interface Props {
   distance?: number;
   delay?: number;
+  threshold?: number;
   children: React.ReactNode;
 }
 
 export const HoverWrapper = ({
   distance = 100,
   delay = 0,
+  threshold = 0.9,
   children,
 }: Props) => {
-  const { ref, isIntersecting } = useIntersection(0.9);
+  const { ref, isIntersecting } = useIntersection(threshold);
 
   const elRef = useRef<HTMLDivElement | null>(null);
 
@@ -38,7 +40,7 @@ export const HoverWrapper = ({
   );
 
   return (
-    <div ref={ref}>
+    <div ref={ref} className="w-full">
       <div
         ref={elRef}
         style={{

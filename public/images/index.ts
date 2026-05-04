@@ -13,3 +13,10 @@ export { default as value1 } from "./value-1.png";
 export { default as value2 } from "./value-2.png";
 export { default as value3 } from "./value-3.png";
 export { default as arrowRight } from "./arrow-right.png";
+
+// 회사소개
+export { default as companyBanner } from "./company-banner.png";
+export { default as companyStep1 } from "./company-step1.png";
+export { default as companyStep2 } from "./company-step2.png";
+export { default as companyStep3 } from "./company-step3.png";
+export { default as companyHistory } from "./company-history.png";
