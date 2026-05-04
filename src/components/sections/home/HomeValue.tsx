@@ -41,13 +41,13 @@ export const HomeValue = () => {
   return (
     <section className="flex justify-center w-full px-[60px] py-[140px] bg-white">
       <div className="flex flex-col w-full max-w-[1080px]">
-        <HoverWrapper distance={40}>
+        <HoverWrapper>
           <h2 className="text-[40px] font-semibold">올타의 핵심 가치</h2>
         </HoverWrapper>
 
         <div className="flex flex-col">
           {values.map((value, index) => (
-            <HoverWrapper key={index} distance={40}>
+            <HoverWrapper key={index} distance={80}>
               <div className="flex flex-col md:flex-row items-center mt-[60px] px-[32px] py-[28px] gap-x-[86px] bg-gray1 rounded-[20px]">
                 <Image
                   src={value.image}
