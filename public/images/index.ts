@@ -4,6 +4,7 @@ export { default as hamburgerIcon } from "./hamburger-icon.png";
 export { default as instaIcon } from "./insta-icon.png";
 export { default as youtubeIcon } from "./youtube-icon.png";
 export { default as blogIcon } from "./blog-icon.png";
+export { default as closeIcon } from "./close-icon.png";
 
 // 홈
 export { default as mainBanner } from "./main-banner.png";

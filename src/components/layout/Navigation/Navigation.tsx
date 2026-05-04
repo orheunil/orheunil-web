@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useResizeHandler } from "@/hooks";
-import { hamburgerIcon, navLogo } from "../../../../public/images";
+import { closeIcon, hamburgerIcon, navLogo } from "../../../../public/images";
 
 const menus = [
   {
@@ -16,11 +16,19 @@ const menus = [
     route: "/service",
   },
   {
+    title: "기술 소개",
+    route: "/service",
+  },
+  {
     title: "솔루션",
     route: "/solution",
   },
   {
     title: "뉴스룸",
+    route: "/news",
+  },
+  {
+    title: "문의",
     route: "/news",
   },
 ];
@@ -30,33 +38,82 @@ export const Navigation = () => {
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
+  useEffect(() => {
+    if (isOpen && isMobile) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpen]);
+
   return (
-    <header className="fixed flex justify-center items-center top-0 w-screen h-[64px] px-[20px] bg-white z-[1]">
+    <>
       {isMobile ? (
-        <nav className="flex justify-between w-full">
-          <Link href="/">
-            <Image src={navLogo} alt="올타" className="w-[62px]" />
-          </Link>
-
-          <button onClick={() => setIsOpen(!isOpen)} className="cursor-pointer">
-            <Image src={hamburgerIcon} alt="메뉴" className="size-[28px]" />
-          </button>
-        </nav>
-      ) : (
-        <nav className="flex justify-between w-full max-w-[1080px]">
-          <Link href="/">
-            <Image src={navLogo} alt="올타" className="w-[62px]" />
-          </Link>
-
-          <div className="flex gap-[60px] font-medium">
-            {menus.map((value, index) => (
-              <Link key={index} href={value.route}>
-                {value.title}
+        <header className="fixed flex items-center top-0 w-screen z-[1]">
+          <nav className="flex flex-col w-full">
+            <div className="flex justify-between items-center w-full h-[64px] px-[20px] bg-white">
+              <Link href="/">
+                <Image src={navLogo} alt="올타" className="w-[62px]" />
               </Link>
-            ))}
-          </div>
-        </nav>
+
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="cursor-pointer"
+              >
+                <Image
+                  src={isOpen ? closeIcon : hamburgerIcon}
+                  alt="메뉴"
+                  className="size-[28px]"
+                />
+              </button>
+            </div>
+
+            <div
+              className={`flex flex-col w-full px-[20px] text-[20px] font-semibold bg-white duration-500 overflow-hidden ${isOpen ? "h-[calc(100vh-64px)]" : "h-0"}`}
+            >
+              <div className="flex flex-col py-[12px] overflow-y-auto hide-scrollbar">
+                {menus.map((value, index) => (
+                  <Link
+                    key={index}
+                    href={value.route}
+                    className="py-[14px] cursor-pointer"
+                  >
+                    {value.title}
+                  </Link>
+                ))}
+
+                <div className="flex items-center mt-[120px]">
+                  <button>KR</button>
+
+                  <div className="w-[2px] h-[12px] mx-[8px] bg-line" />
+
+                  <button>EN</button>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </header>
+      ) : (
+        <header className="fixed flex justify-center items-center top-0 w-screen h-[64px] px-[20px] bg-white z-[1]">
+          <nav className="flex justify-between w-full max-w-[1080px]">
+            <Link href="/">
+              <Image src={navLogo} alt="올타" className="w-[62px]" />
+            </Link>
+
+            <div className="flex gap-[60px] font-semibold">
+              {menus.map((value, index) => (
+                <Link key={index} href={value.route}>
+                  {value.title}
+                </Link>
+              ))}
+            </div>
+          </nav>
+        </header>
       )}
-    </header>
+    </>
   );
 };
