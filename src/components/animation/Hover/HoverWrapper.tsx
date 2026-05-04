@@ -1,9 +1,9 @@
 "use client";
 
 import React, { useRef } from "react";
-import { useIntersection } from "@/hooks";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { useIntersection } from "@/hooks";
 
 interface Props {
   distance?: number;
@@ -16,7 +16,7 @@ export const HoverWrapper = ({
   delay = 0,
   children,
 }: Props) => {
-  const { ref, isIntersecting } = useIntersection();
+  const { ref, isIntersecting } = useIntersection(0.9);
 
   const elRef = useRef<HTMLDivElement | null>(null);
 
@@ -25,20 +25,13 @@ export const HoverWrapper = ({
       if (!elRef.current) return;
 
       if (isIntersecting) {
-        gsap.fromTo(
-          elRef.current,
-          {
-            y: distance,
-            opacity: 0,
-          },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 1,
-            ease: "power3.out",
-            delay,
-          },
-        );
+        gsap.to(elRef.current, {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          ease: "power3.out",
+          delay,
+        });
       }
     },
     { dependencies: [isIntersecting] },
@@ -46,7 +39,15 @@ export const HoverWrapper = ({
 
   return (
     <div ref={ref}>
-      <div ref={elRef}>{children}</div>
+      <div
+        ref={elRef}
+        style={{
+          transform: `translateY(${distance}px)`,
+          opacity: 0,
+        }}
+      >
+        {children}
+      </div>
     </div>
   );
 };
