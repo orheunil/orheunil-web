@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { HoverWrapper } from "@/components/animation/Hover";
 import { value1, value2, value3 } from "../../../../public/images";
 
 const values = [
@@ -40,28 +41,29 @@ export const HomeValue = () => {
   return (
     <section className="flex justify-center w-full px-[60px] py-[140px] bg-white">
       <div className="flex flex-col w-full max-w-[1080px]">
-        <h2 className="text-[40px] font-semibold">올타의 핵심 가치</h2>
+        <HoverWrapper distance={40}>
+          <h2 className="text-[40px] font-semibold">올타의 핵심 가치</h2>
+        </HoverWrapper>
 
         <div className="flex flex-col">
           {values.map((value, index) => (
-            <div
-              key={index}
-              className="flex flex-col md:flex-row items-center mt-[60px] px-[32px] py-[28px] gap-x-[86px] bg-gray1 rounded-[20px]"
-            >
-              <Image
-                src={value.image}
-                alt={`value_${index + 1}`}
-                className="size-[240px]"
-              />
+            <HoverWrapper key={index} distance={40}>
+              <div className="flex flex-col md:flex-row items-center mt-[60px] px-[32px] py-[28px] gap-x-[86px] bg-gray1 rounded-[20px]">
+                <Image
+                  src={value.image}
+                  alt={`value_${index + 1}`}
+                  className="size-[240px]"
+                />
 
-              <div className="flex flex-col">
-                <h3 className="text-main text-[32px] font-semibold">
-                  {value.title}
-                </h3>
+                <div className="flex flex-col">
+                  <h3 className="text-main text-[32px] font-semibold">
+                    {value.title}
+                  </h3>
 
-                <p className="mt-[24px] text-[20px]">{value.content}</p>
+                  <p className="mt-[24px] text-[20px]">{value.content}</p>
+                </div>
               </div>
-            </div>
+            </HoverWrapper>
           ))}
         </div>
       </div>

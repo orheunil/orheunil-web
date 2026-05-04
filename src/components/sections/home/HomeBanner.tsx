@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { contactIcon, downloadIcon } from "../../../../public/images";
 import { HoverWrapper } from "@/components/animation/Hover";
+import { contactIcon, downloadIcon } from "../../../../public/images";
 
 export const HomeBanner = () => {
   return (

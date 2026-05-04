@@ -1,11 +1,11 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import {
   CurrentIndexWrapper,
   NextIndexWrapper,
   PrevIndexWrapper,
 } from "@/components/animation/VerticalScroll";
-import { useEffect, useRef, useState } from "react";
 
 const contents = [
   { title: "전국 주유소", value: "10,839" },
