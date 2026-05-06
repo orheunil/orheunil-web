@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { useResizeHandler } from "@/hooks";
 import { closeIcon, hamburgerIcon, navLogo } from "../../../../public/images";
 
@@ -17,7 +18,7 @@ const menus = [
   },
   {
     title: "기술 소개",
-    route: "/service",
+    route: "/tech",
   },
   {
     title: "솔루션",
@@ -34,21 +35,15 @@ const menus = [
 ];
 
 export const Navigation = () => {
+  const pathname = usePathname();
+
   const { isMobile } = useResizeHandler();
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   useEffect(() => {
-    if (isOpen && isMobile) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [isOpen]);
+    setIsOpen(false);
+  }, [pathname]);
 
   return (
     <>
