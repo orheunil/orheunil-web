@@ -67,7 +67,7 @@ export const HomeCount = () => {
         <div className="absolute text-center translate-y-[-70px]">
           <h3
             key={index}
-            className="text-[24px] font-semibold animate-fade-out"
+            className="text-[18px] md:text-[24px] font-semibold animate-fade-out"
           >
             {!prevItem || !nextItem
               ? ""
@@ -79,17 +79,23 @@ export const HomeCount = () => {
 
         {prevItem && (
           <PrevIndexWrapper direction={direction}>
-            <p className="text-[86px] font-bold">{prevItem.value}</p>
+            <p className="text-[60px] md:text-[86px] font-bold">
+              {prevItem.value}
+            </p>
           </PrevIndexWrapper>
         )}
 
         <CurrentIndexWrapper direction={direction}>
-          <p className="text-[86px] font-bold">{currentItem.value}</p>
+          <p className="text-[60px] md:text-[86px] font-bold">
+            {currentItem.value}
+          </p>
         </CurrentIndexWrapper>
 
         {nextItem && (
           <NextIndexWrapper direction={direction}>
-            <p className="text-[86px] font-bold">{nextItem.value}</p>
+            <p className="text-[60px] md:text-[86px] font-bold">
+              {nextItem.value}
+            </p>
           </NextIndexWrapper>
         )}
       </div>

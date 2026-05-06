@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="ko" className="h-full antialiased">
       <body
-        className={`min-h-full flex flex-col pt-[64px] ${pretendard.className} text-black`}
+        className={`flex flex-col min-h-full pt-[64px] ${pretendard.className} text-black`}
       >
         <Navigation />
 

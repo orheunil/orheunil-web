@@ -37,7 +37,7 @@ const menus = [
 export const Navigation = () => {
   const pathname = usePathname();
 
-  const { isMobile } = useResizeHandler();
+  const { isDesktop } = useResizeHandler();
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -47,7 +47,23 @@ export const Navigation = () => {
 
   return (
     <>
-      {isMobile ? (
+      {isDesktop ? (
+        <header className="fixed flex justify-center items-center top-0 w-screen h-[64px] px-[20px] md:px-[60px] bg-white z-[1]">
+          <nav className="flex justify-between w-full max-w-[1080px]">
+            <Link href="/">
+              <Image src={navLogo} alt="올타" className="w-[62px]" />
+            </Link>
+
+            <div className="flex gap-[60px] font-semibold">
+              {menus.map((value, index) => (
+                <Link key={index} href={value.route}>
+                  {value.title}
+                </Link>
+              ))}
+            </div>
+          </nav>
+        </header>
+      ) : (
         <header className="fixed flex items-center top-0 w-screen z-[1]">
           <nav className="flex flex-col w-full">
             <div className="flex justify-between items-center w-full h-[64px] px-[20px] bg-white">
@@ -89,22 +105,6 @@ export const Navigation = () => {
                   <button>EN</button>
                 </div>
               </div>
-            </div>
-          </nav>
-        </header>
-      ) : (
-        <header className="fixed flex justify-center items-center top-0 w-screen h-[64px] px-[20px] bg-white z-[1]">
-          <nav className="flex justify-between w-full max-w-[1080px]">
-            <Link href="/">
-              <Image src={navLogo} alt="올타" className="w-[62px]" />
-            </Link>
-
-            <div className="flex gap-[60px] font-semibold">
-              {menus.map((value, index) => (
-                <Link key={index} href={value.route}>
-                  {value.title}
-                </Link>
-              ))}
             </div>
           </nav>
         </header>

@@ -17,7 +17,16 @@ export { default as arrowRight } from "./arrow-right.png";
 
 // 회사소개
 export { default as companyBanner } from "./company-banner.png";
-export { default as companyStep1 } from "./company-step1.png";
-export { default as companyStep2 } from "./company-step2.png";
-export { default as companyStep3 } from "./company-step3.png";
+export { default as companyStep1 } from "./company-step-1.png";
+export { default as companyStep2 } from "./company-step-2.png";
+export { default as companyStep3 } from "./company-step-3.png";
 export { default as companyHistory } from "./company-history.png";
+
+// 기술소개
+export { default as cctvImage } from "./cctv-image.png";
+export { default as techImage1 } from "./tech-image-1.png";
+export { default as techImage2 } from "./tech-image-2.png";
+export { default as techImage3 } from "./tech-image-3.png";
+export { default as control1 } from "./control-1.png";
+export { default as control2 } from "./control-2.png";
+export { default as paymentImage } from "./payment-image.png";

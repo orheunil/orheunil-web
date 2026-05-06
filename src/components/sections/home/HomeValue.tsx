@@ -52,15 +52,17 @@ export const HomeValue = () => {
                 <Image
                   src={value.image}
                   alt={`value_${index + 1}`}
-                  className="size-[240px]"
+                  className="size-[140px] md:size-[180px] lg:size-[240px]"
                 />
 
-                <div className="flex flex-col">
-                  <h3 className="text-main text-[32px] font-semibold">
+                <div className="flex flex-col w-full">
+                  <h3 className="text-main text-[20px] md:text-[28px] lg:text-[32px] font-semibold">
                     {value.title}
                   </h3>
 
-                  <p className="mt-[24px] text-[20px]">{value.content}</p>
+                  <p className="mt-[12px] md:mt-[24px] text-[14px] md:text-[18ox] lg:text-[20px]">
+                    {value.content}
+                  </p>
                 </div>
               </div>
             </HoverWrapper>
