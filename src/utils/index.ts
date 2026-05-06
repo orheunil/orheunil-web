@@ -1,1 +1,1 @@
-export * from "./localization";
+export * from "./i18n-server";

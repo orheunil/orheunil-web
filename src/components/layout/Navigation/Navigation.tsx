@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import { useTranslation } from "react-i18next";
 import Link from "next/link";
 import Image from "next/image";
 import { useResizeHandler } from "@/hooks";
@@ -37,6 +38,7 @@ const menus = [
 export const Navigation = () => {
   const pathname = usePathname();
 
+  const { i18n } = useTranslation();
   const { isDesktop } = useResizeHandler();
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -98,11 +100,11 @@ export const Navigation = () => {
                 ))}
 
                 <div className="flex items-center mt-[120px]">
-                  <button>KR</button>
+                  <button onClick={() => i18n.changeLanguage("ko")}>KR</button>
 
                   <div className="w-[2px] h-[12px] mx-[8px] bg-line" />
 
-                  <button>EN</button>
+                  <button onClick={() => i18n.changeLanguage("en")}>EN</button>
                 </div>
               </div>
             </div>

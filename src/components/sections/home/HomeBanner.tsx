@@ -2,7 +2,11 @@ import Image from "next/image";
 import { HoverWrapper } from "@/components/animation/Hover";
 import { contactIcon, downloadIcon } from "../../../../public/images";
 
-export const HomeBanner = () => {
+interface Props {
+  t: (key: string) => string;
+}
+
+export const HomeBanner = ({ t }: Props) => {
   return (
     <section
       style={{

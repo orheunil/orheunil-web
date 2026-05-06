@@ -1,3 +1,4 @@
+import { initServerI18N } from "@/utils";
 import {
   HomeBanner,
   HomeContact,
@@ -6,10 +7,13 @@ import {
   HomeValue,
 } from "@/components/sections/home";
 
-export default function Home() {
+export default async function Home({ params }: { params: { lang: string } }) {
+  const i18n = await initServerI18N(params.lang, "home");
+  const t = i18n.getFixedT(params.lang, "home");
+
   return (
     <div className="flex flex-col w-full">
-      <HomeBanner />
+      <HomeBanner t={t} />
       <HomeValue />
       <HomeCount />
       <HomeNews />

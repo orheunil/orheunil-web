@@ -6,7 +6,10 @@ export const fallbackLng = "ko";
 export const locales = [fallbackLng, "en"] as const;
 export const defaultNS = "common";
 
-export const getOptions = (lang = fallbackLng, ns = defaultNS): InitOptions => {
+export const getI18nOptions = (
+  lang = fallbackLng,
+  ns: string | string[] = defaultNS,
+): InitOptions => {
   return {
     // debug: true,
     supportedLngs: locales, // 지원하는 언어 목록 설정
