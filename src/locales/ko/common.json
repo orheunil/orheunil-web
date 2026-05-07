@@ -1,0 +1,10 @@
+{
+  "navigation": {
+    "company": "회사 소개",
+    "service": "서비스",
+    "tech": "기술 소개",
+    "solution": "솔루션",
+    "news": "뉴스룸",
+    "contact": "문의"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "navigation": {
+    "company": "Company",
+    "service": "Services",
+    "tech": "Technology",
+    "solution": "Solutions",
+    "news": "News",
+    "contact": "Contact"
+  }
+}

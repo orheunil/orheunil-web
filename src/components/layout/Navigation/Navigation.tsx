@@ -8,41 +8,41 @@ import Image from "next/image";
 import { useResizeHandler } from "@/hooks";
 import { closeIcon, hamburgerIcon, navLogo } from "../../../../public/images";
 
-const menus = [
-  {
-    title: "회사소개",
-    route: "/company",
-  },
-  {
-    title: "서비스",
-    route: "/service",
-  },
-  {
-    title: "기술 소개",
-    route: "/tech",
-  },
-  {
-    title: "솔루션",
-    route: "/solution",
-  },
-  {
-    title: "뉴스룸",
-    route: "/news",
-  },
-  {
-    title: "문의",
-    route: "/news",
-  },
-];
-
 export const Navigation = () => {
   const router = useRouter();
   const pathname = usePathname();
 
-  const { t } = useTranslation();
+  const { t } = useTranslation("common");
   const { isDesktop } = useResizeHandler();
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  const menus = [
+    {
+      title: t("navigation.company"),
+      route: "/company",
+    },
+    {
+      title: t("navigation.service"),
+      route: "/service",
+    },
+    {
+      title: t("navigation.tech"),
+      route: "/tech",
+    },
+    {
+      title: t("navigation.solution"),
+      route: "/solution",
+    },
+    {
+      title: t("navigation.news"),
+      route: "/news",
+    },
+    {
+      title: t("navigation.contact"),
+      route: "/contact",
+    },
+  ];
 
   const currentLocale = pathname.split("/")[1];
 
