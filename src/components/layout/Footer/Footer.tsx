@@ -1,50 +1,57 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 import { blogIcon, instaIcon, youtubeIcon } from "../../../../public/images";
 
 export const Footer = () => {
+  const { t } = useTranslation("common");
+
   return (
     <footer className="flex justify-center bg-gray-100 px-[60px]">
       <div className="flex flex-col w-full max-w-[1080px] pt-[80px] pb-[96px]">
         <div className="flex flex-col md:flex-row gap-[40px]">
           <div className="flex flex-col w-[130px] text-[16px]">
-            <h3 className="font-medium">회사</h3>
+            <h3 className="font-medium">{t("footer.company.title")}</h3>
 
             <div className="flex flex-col mt-[16px] gap-[8px] text-gray7">
-              <Link href="/about">회사소개</Link>
-              <Link href="/service">서비스</Link>
-              <Link href="/solution">솔루션</Link>
-              <Link href="/news">뉴스룸</Link>
+              <Link href="/company">{t("footer.company.company")}</Link>
+              <Link href="/tech">{t("footer.company.tech")}</Link>
+              <Link href="/solution">{t("footer.company.solution")}</Link>
+              <Link href="/news">{t("footer.company.news")}</Link>
             </div>
           </div>
 
           <div className="flex flex-col w-[130px] text-[16px]">
-            <h3 className="font-medium">서비스</h3>
+            <h3 className="font-medium">{t("footer.service.title")}</h3>
 
             <div className="flex flex-col mt-[16px] gap-[8px] text-gray7">
-              <p>세차장 찾기</p>
-              <p>앱 다운로드</p>
+              <p>{t("footer.service.stores")}</p>
+              <p>{t("footer.service.app")}</p>
             </div>
           </div>
 
           <div className="flex flex-col w-[130px] text-[16px]">
-            <h3 className="font-medium">문의</h3>
+            <h3 className="font-medium">{t("footer.inquiry.title")}</h3>
 
             <div className="flex flex-col mt-[16px] gap-[8px] text-gray7">
-              <p>고객센터</p>
-              <p>제휴 문의</p>
-              <p>IR</p>
+              <p>{t("footer.inquiry.center")}</p>
+              <p>{t("footer.inquiry.partnership")}</p>
+              <p>{t("footer.inquiry.ir")}</p>
             </div>
           </div>
         </div>
 
         <div className="relative flex flex-col mt-[80px] pb-[72px] md:pb-0">
           {/* 회사 정보 */}
-          <p className="text-[15px] font-semibold">(주)옳은일</p>
+          <p className="text-[15px] font-semibold">
+            {t("footer.information.title")}
+          </p>
 
           <address className="mt-[8px] text-gray5 text-[13px] not-italic">
-            사업자 등록번호 : 850-81-02703 | 대표 : 이승열 | 주소 : 경기 하남시
-            미사강변한강로 SKV1센터
+            {t("footer.information.brn")} | {t("footer.information.ceo")} |{" "}
+            {t("footer.information.address")}
           </address>
 
           <p className="text-gray5 text-[13px]">
@@ -57,10 +64,10 @@ export const Footer = () => {
 
           {/* 약관 */}
           <div className="flex flex-wrap items-center mt-[20px] gap-x-[20px] gap-y-[8px] text-[13px] font-semibold">
-            <button>이용약관</button>
-            <button>개인정보처리방침</button>
-            <button>운영정책</button>
-            <button>위치기반서비스 이용약관</button>
+            <button>{t("footer.terms.service")}</button>
+            <button>{t("footer.terms.privacy")}</button>
+            <button>{t("footer.terms.policy")}</button>
+            <button>{t("footer.terms.location")}</button>
           </div>
 
           {/* SNS */}
@@ -70,7 +77,7 @@ export const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Image src={instaIcon} alt="인스타그램" className="size-[32px]" />
+              <Image src={instaIcon} alt="instagram" className="size-[32px]" />
             </a>
 
             <a
@@ -78,7 +85,7 @@ export const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Image src={youtubeIcon} alt="유튜브" className="size-[32px]" />
+              <Image src={youtubeIcon} alt="youtube" className="size-[32px]" />
             </a>
 
             <a
@@ -86,7 +93,7 @@ export const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Image src={blogIcon} alt="블로그" className="size-[32px]" />
+              <Image src={blogIcon} alt="blog" className="size-[32px]" />
             </a>
           </div>
         </div>
