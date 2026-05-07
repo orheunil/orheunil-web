@@ -4,17 +4,9 @@ interface Props {
   t: (key: string) => string;
 }
 
-export const CompanyBanner = ({ t }: Props) => {
+export const SolutionIntroduce = ({ t }: Props) => {
   return (
-    <section
-      style={{
-        backgroundImage:
-          "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/images/company-banner.png)",
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-      }}
-      className="flex flex-col justify-center w-full h-[calc(100vh-64px)] px-[20px] text-center"
-    >
+    <section className="flex flex-col justify-center w-full h-[calc(100vh-64px)] px-[20px] bg-white">
       <HoverWrapper>
         <h1 className="text-white text-[32px] md:text-[60px] font-bold leading-[1.1] md:leading-[1.4]">
           {t("banner.title.line1")}

@@ -6,55 +6,59 @@ import {
   companyStep3,
 } from "../../../../public/images";
 
-const steps = [
-  {
-    image: companyStep1,
-    title: "Smart Station",
-    content: (
-      <>
-        세차•주유•주차 거점을 데이터 기반 스마트 스테이션으로
-        <br />
-        전환해 운영을 자동화하고 효율을 극대화합니다.
-      </>
-    ),
-  },
-  {
-    image: companyStep2,
-    title: "Energy Platform",
-    content: (
-      <>
-        EV 충전 인프라를 중심으로 에너지 관리 영역까지 확장해
-        <br />
-        차량과 에너지를 하나의 흐름으로 연결합니다.
-      </>
-    ),
-  },
-  {
-    image: companyStep3,
-    title: "Robotaxi OS",
-    content: (
-      <>
-        로봇택시 스테이션 1,000개를 기반으로
-        <br />
-        자율주행 시대의 표준 운영체제를 구축합니다.
-      </>
-    ),
-  },
-];
+interface Props {
+  t: (key: string) => string;
+}
 
-export const CompanyStep = () => {
+export const CompanyStep = ({ t }: Props) => {
+  const items = [
+    {
+      image: companyStep1,
+      title: t("step.items.0.title"),
+      content: (
+        <>
+          {t("step.items.0.content.line1")}
+          <br />
+          {t("step.items.0.content.line2")}
+        </>
+      ),
+    },
+    {
+      image: companyStep2,
+      title: t("step.items.1.title"),
+      content: (
+        <>
+          {t("step.items.1.content.line1")}
+          <br />
+          {t("step.items.1.content.line2")}
+        </>
+      ),
+    },
+    {
+      image: companyStep3,
+      title: t("step.items.2.title"),
+      content: (
+        <>
+          {t("step.items.2.content.line1")}
+          <br />
+          {t("step.items.2.content.line2")}
+        </>
+      ),
+    },
+  ];
+
   return (
     <section className="flex justify-center w-full px-[20px] py-[140px] bg-white">
       <div className="flex flex-col w-full max-w-[1080px]">
         <HoverWrapper>
           <h2 className="text-center text-[28px] md:text-[40px] font-semibold">
-            차량 관리의 기준을 다시 만듭니다
+            {t("step.title")}
           </h2>
         </HoverWrapper>
 
         <div className="flex flex-col items-center w-full mt-[60px] gap-[100px]">
-          {steps.map((value, index) => (
-            <HoverWrapper key={index} distance={80}>
+          {items.map((value, index) => (
+            <HoverWrapper key={index} distance={80} width="100%">
               <div
                 key={index}
                 className={`flex flex-col items-center w-full max-w-[568px] md:max-w-full gap-[60px] ${

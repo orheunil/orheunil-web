@@ -1,0 +1,91 @@
+{
+  "banner": {
+    "title": {
+      "line1": "단순 인식을 넘어",
+      "highlight": "행동 검증",
+      "line2": "을 수행하는",
+      "line3": "Deep-Tech 기술"
+    },
+    "description": {
+      "line1": "기존 LPR 시스템은 차량의 진입만 볼 뿐,",
+      "line2": "서비스 이용은 보지 못합니다.",
+      "line3": "올타는 이 사각지대(Blind Spot)를 Vision AI로 해결합니다."
+    }
+  },
+  "introduce": {
+    "title": {
+      "line1": "인식을 넘어,",
+      "line2": "행동까지 이해하는 AI"
+    },
+    "items": [
+      {
+        "title": "Hyper-Precision ID",
+        "content": {
+          "line1": "YOLOv11 기반 객체 탐지 + 앙상블 OCR.",
+          "line2": "비, 눈, 흙탕물로 오염된 번호판도",
+          "line3": "99.7% 정확도 달성."
+        }
+      },
+      {
+        "title": "Action Verification",
+        "content": {
+          "line1": "Semantic Segmentation 기술로 영상의 픽셀을 분석.",
+          "line2": "AI가 '세차 거품이 묻음', '충전기 케이블 연결됨' 등",
+          "line3": "구체적 물리 상태를 인지."
+        }
+      },
+      {
+        "title": "Seamless Tracking",
+        "content": {
+          "line1": "Vehicle Re-ID 및 멀티 카메라 추적(MCVT) 기술.",
+          "line2": "사각지대에 들어가더라도 동일 차량을 연속 추적."
+        }
+      }
+    ]
+  },
+  "control": {
+    "title": {
+      "line1": "정확한 인식부터 끊김 없는 추적까지,",
+      "line2": "완전한 차량 AI 시스템"
+    },
+    "items": [
+      {
+        "title": "악천후에서도 99.7% 정확도",
+        "description": {
+          "line1": "YOLOv11 기반 + 앙상블 OCR 기술",
+          "line2": "비, 눈, 흙탕물로 오염된 번호판 인식"
+        }
+      },
+      {
+        "title": "사각지대 없는 연속 추적",
+        "description": {
+          "line1": "Vehicle Re-ID 및 멀티 카메라 추적(MCVT)",
+          "line2": "차량이 이동하거나 사각지대에 들어가더라도",
+          "line3": "동일 차량을 연속 추적"
+        }
+      }
+    ]
+  },
+  "payment": {
+    "title": {
+      "line1": "픽셀 단위의 행동 분석으로",
+      "line2": "서비스 완료를 검증하고",
+      "highlight": "결제를 트리거",
+      "line3": "합니다"
+    },
+    "items": [
+      {
+        "title": "Action Verification",
+        "content": "영상의 픽셀을 분석하여 서비스 수행 여부 판단"
+      },
+      {
+        "title": "Context Awareness",
+        "content": "AI가 ‘세차 거품이 묻음’, ‘충전기 케이블이 연결됨’ 같은 구체적인 물리적 상태를 인지"
+      },
+      {
+        "title": "The Result",
+        "content": "실제 서비스가 수행되었음이 데이터로 검증될 때만 결제가 실행되어 부정 결제를 원천 차단"
+      }
+    ]
+  }
+}

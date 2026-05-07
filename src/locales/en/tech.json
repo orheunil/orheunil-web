@@ -1,0 +1,91 @@
+{
+  "banner": {
+    "title": {
+      "line1": "Beyond Simple Recognition,",
+      "highlight": "Behavior Verification ",
+      "line2": "Powered by",
+      "line3": "Deep-Tech"
+    },
+    "description": {
+      "line1": "Traditional LPR systems only detect vehicle entry,",
+      "line2": "but fail to verify actual service usage.",
+      "line3": "ALLTA solves this blind spot with Vision AI."
+    }
+  },
+  "introduce": {
+    "title": {
+      "line1": "Beyond Recognition,",
+      "line2": "AI That Understands Behavior"
+    },
+    "items": [
+      {
+        "title": "Hyper-Precision ID",
+        "content": {
+          "line1": "YOLOv11-based object detection with ensemble OCR.",
+          "line2": "Achieves 99.7% accuracy even on plates",
+          "line3": "obscured by rain, snow, or mud."
+        }
+      },
+      {
+        "title": "Action Verification",
+        "content": {
+          "line1": "Semantic segmentation analyzes every pixel in video streams.",
+          "line2": "AI recognizes physical states such as",
+          "line3": "'car wash foam applied' or 'charger cable connected'."
+        }
+      },
+      {
+        "title": "Seamless Tracking",
+        "content": {
+          "line1": "Vehicle Re-ID and multi-camera vehicle tracking (MCVT).",
+          "line2": "Continuously tracks the same vehicle even through blind spots."
+        }
+      }
+    ]
+  },
+  "control": {
+    "title": {
+      "line1": "From Precise Recognition to Seamless Tracking,",
+      "line2": "A Complete Vehicle AI System"
+    },
+    "items": [
+      {
+        "title": "99.7% Accuracy Even in Extreme Weather",
+        "description": {
+          "line1": "YOLOv11-based ensemble OCR technology",
+          "line2": "Recognizes plates obscured by rain, snow, or mud"
+        }
+      },
+      {
+        "title": "Continuous Tracking Without Blind Spots",
+        "description": {
+          "line1": "Vehicle Re-ID and multi-camera vehicle tracking (MCVT)",
+          "line2": "Continuously tracks the same vehicle",
+          "line3": "even through movement and blind spots"
+        }
+      }
+    ]
+  },
+  "payment": {
+    "title": {
+      "line1": "Pixel-Level Behavior Analysis",
+      "line2": "Verifies Service Completion and",
+      "highlight": "Triggers Payment ",
+      "line3": "Automatically"
+    },
+    "items": [
+      {
+        "title": "Action Verification",
+        "content": "Analyzes video pixels to determine whether a service has actually been performed"
+      },
+      {
+        "title": "Context Awareness",
+        "content": "AI recognizes specific physical states such as 'car wash foam applied' or 'charging cable connected'"
+      },
+      {
+        "title": "The Result",
+        "content": "Payments are executed only when service completion is verified by data, fundamentally preventing fraudulent transactions"
+      }
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "banner": {
+    "title": {
+      "line1": "Vehicles can drive themselves,",
+      "line2": "but they cannot manage themselves."
+    },
+    "description": {
+      "line1": "Beyond a simple solution, ALLTA becomes the standard OS",
+      "line2": "for the robotaxi era, orchestrating every step of autonomous vehicle operations."
+    }
+  },
+  "step": {
+    "title": "Redefining the Standard of Vehicle Management",
+    "items": [
+      {
+        "title": "Smart Station",
+        "content": {
+          "line1": "Transform car wash, fueling, and parking hubs",
+          "line2": "into data-driven smart stations for automated operations."
+        }
+      },
+      {
+        "title": "Energy Platform",
+        "content": {
+          "line1": "Expand beyond EV charging infrastructure",
+          "line2": "to connect vehicles and energy into one ecosystem."
+        }
+      },
+      {
+        "title": "Robotaxi OS",
+        "content": {
+          "line1": "Build the standard operating system",
+          "line2": "for the autonomous driving era with 1,000 robotaxi stations."
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": "ALLTA Continues to Grow"
+  }
+}

@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
+import { useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
 import Image from "next/image";
@@ -36,29 +36,35 @@ const menus = [
 ];
 
 export const Navigation = () => {
+  const router = useRouter();
   const pathname = usePathname();
 
-  const { i18n } = useTranslation();
+  const { t } = useTranslation();
   const { isDesktop } = useResizeHandler();
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  useEffect(() => {
-    setIsOpen(false);
-  }, [pathname]);
+  const currentLocale = pathname.split("/")[1];
+
+  const handleChangeLocales = (lang: "ko" | "en") => () => {
+    const segments = pathname.split("/");
+    segments[1] = lang;
+
+    return router.push(segments.join("/"));
+  };
 
   return (
     <>
       {isDesktop ? (
         <header className="fixed flex justify-center items-center top-0 w-screen h-[64px] px-[20px] md:px-[60px] bg-white z-[1]">
           <nav className="flex justify-between w-full max-w-[1080px]">
-            <Link href="/">
+            <Link href={`/${currentLocale}`}>
               <Image src={navLogo} alt="올타" className="w-[62px]" />
             </Link>
 
             <div className="flex gap-[60px] font-semibold">
               {menus.map((value, index) => (
-                <Link key={index} href={value.route}>
+                <Link key={index} href={`/${currentLocale}${value.route}`}>
                   {value.title}
                 </Link>
               ))}
@@ -69,7 +75,7 @@ export const Navigation = () => {
         <header className="fixed flex items-center top-0 w-screen z-[1]">
           <nav className="flex flex-col w-full">
             <div className="flex justify-between items-center w-full h-[64px] px-[20px] bg-white">
-              <Link href="/">
+              <Link href={`/${currentLocale}`} onClick={() => setIsOpen(false)}>
                 <Image src={navLogo} alt="올타" className="w-[62px]" />
               </Link>
 
@@ -92,7 +98,8 @@ export const Navigation = () => {
                 {menus.map((value, index) => (
                   <Link
                     key={index}
-                    href={value.route}
+                    href={`/${currentLocale}${value.route}`}
+                    onClick={() => setIsOpen(false)}
                     className="py-[14px] cursor-pointer"
                   >
                     {value.title}
@@ -100,11 +107,25 @@ export const Navigation = () => {
                 ))}
 
                 <div className="flex items-center mt-[120px]">
-                  <button onClick={() => i18n.changeLanguage("ko")}>KR</button>
+                  <button
+                    onClick={handleChangeLocales("ko")}
+                    className={
+                      currentLocale === "ko" ? "text-black" : "text-gray2"
+                    }
+                  >
+                    KR
+                  </button>
 
                   <div className="w-[2px] h-[12px] mx-[8px] bg-line" />
 
-                  <button onClick={() => i18n.changeLanguage("en")}>EN</button>
+                  <button
+                    onClick={handleChangeLocales("en")}
+                    className={
+                      currentLocale === "en" ? "text-black" : "text-gray2"
+                    }
+                  >
+                    EN
+                  </button>
                 </div>
               </div>
             </div>
