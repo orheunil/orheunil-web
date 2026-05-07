@@ -1,4 +1,7 @@
-import { SolutionIntroduce } from "@/components/sections/solution";
+import {
+  SolutionIntroduce,
+  SolutionPrice,
+} from "@/components/sections/solution";
 import { initServerI18N } from "@/utils";
 
 export default async function Solution({
@@ -14,6 +17,7 @@ export default async function Solution({
   return (
     <div className="flex flex-col w-full">
       <SolutionIntroduce t={t} />
+      <SolutionPrice t={t} />
     </div>
   );
 }

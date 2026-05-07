@@ -1,0 +1,41 @@
+{
+  "introduce": {
+    "title": {
+      "line1": "One Platform,",
+      "line2": "Fundamentally Reducing Operational Costs"
+    },
+    "items": [
+      {
+        "title": "Cloud CCTV Monitoring",
+        "content": "AI-powered real-time video analysis automatically detects abnormal situations and enables 24/7 remote monitoring without on-site staff."
+      },
+      {
+        "title": "Dedicated POS & Payment Integration",
+        "content": "Matches vehicle IDs with service history to prevent unauthorized usage while handling payment and settlement in one flow."
+      },
+      {
+        "title": "Integrated ERP for Car Wash & Fuel",
+        "content": "Manage inventory, sales, and operations for car wash and fueling businesses from a single integrated dashboard."
+      },
+      {
+        "title": "AI Bypass Engine",
+        "content": "Payments are executed only when Vision AI directly verifies service completion, fundamentally blocking abuse."
+      },
+      {
+        "title": "AI Marketing & Data Reports",
+        "content": "Automatically sends CRM campaigns based on visit pattern analysis and visualizes sales and profitability through reports."
+      }
+    ]
+  },
+  "price": {
+    "title": "Unlimited Car Washes for Just $19/Month!",
+    "content": {
+      "line1": "ALLTA PASS is a monthly subscription service",
+      "line2": "that provides unlimited automatic car washes",
+      "line3": "at partner gas stations nationwide.",
+      "line4": "Available anywhere across the country",
+      "line5": "Easy payments through a single app"
+    },
+    "cta": "Get Started"
+  }
+}

@@ -30,3 +30,13 @@ export { default as techImage3 } from "./tech-image-3.png";
 export { default as control1 } from "./control-1.png";
 export { default as control2 } from "./control-2.png";
 export { default as paymentImage } from "./payment-image.png";
+
+// 솔루션
+export { default as solution1 } from "./solution-1.png";
+export { default as solution2 } from "./solution-2.png";
+export { default as solution3 } from "./solution-3.png";
+export { default as solution4 } from "./solution-4.png";
+export { default as solution5 } from "./solution-5.png";
+export { default as phoneImage } from "./phone-image.png";
+export { default as checkIcon } from "./check-icon.png";
+export { default as arrowWhite } from "./arrow-white.png";
