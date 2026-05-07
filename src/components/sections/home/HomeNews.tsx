@@ -2,6 +2,10 @@ import Image from "next/image";
 import { value1, value2, value3 } from "../../../../public/images";
 import { HoverWrapper } from "@/components/animation/Hover";
 
+interface Props {
+  t: (key: string) => string;
+}
+
 const values = [
   {
     image: value1,
@@ -20,7 +24,7 @@ const values = [
   },
 ];
 
-export const HomeNews = () => {
+export const HomeNews = ({ t }: Props) => {
   return (
     <section className="flex justify-center w-full px-[60px] py-[140px] bg-white">
       <div className="flex flex-col w-full max-w-[1080px]">

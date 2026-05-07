@@ -9,5 +9,69 @@
       "contact": "Contact Us",
       "download": "Download IR"
     }
+  },
+  "value": {
+    "title": "ALLTA Core Values",
+    "items": [
+      {
+        "title": "0% Abusing",
+        "content": {
+          "line1": "AI directly verifies and matches all data one-to-one.",
+          "line2": "We provide a settlement system that tolerates not even a single won of discrepancy."
+        }
+      },
+      {
+        "title": "Integrated Control OS",
+        "content": {
+          "line1": "Connect all gas station brands including SK, GS, and S-Oil",
+          "line2": "through a single unified platform."
+        }
+      },
+      {
+        "title": "AI Marketing Engine",
+        "content": {
+          "line1": "Maximize gas station revenue",
+          "line2": "through AI-driven marketing strategies."
+        }
+      }
+    ]
+  },
+  "count": {
+    "items": [
+      {
+        "title": "Gas Stations Nationwide",
+        "value": "10,839"
+      },
+      {
+        "title": "Automotive Aftermarket TAM",
+        "value": "$68B"
+      },
+      {
+        "title": "Monthly Profit Increase per Station",
+        "value": "$3.4K"
+      },
+      {
+        "title": "AI Vehicle Recognition Accuracy",
+        "value": "99.7%"
+      }
+    ]
+  },
+  "contact": {
+    "b2b": {
+      "label": "B2B Solution",
+      "title": {
+        "line1": "Manage complex gas station",
+        "line2": "and car wash operations smarter"
+      },
+      "cta": "Contact Sales"
+    },
+    "b2c": {
+      "label": "B2C Service",
+      "title": {
+        "line1": "Unlimited car washes",
+        "line2": "with ALLTA subscription"
+      },
+      "cta": "Get Started"
+    }
   }
 }

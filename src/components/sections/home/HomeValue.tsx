@@ -2,47 +2,52 @@ import Image from "next/image";
 import { HoverWrapper } from "@/components/animation/Hover";
 import { value1, value2, value3 } from "../../../../public/images";
 
-const values = [
-  {
-    image: value1,
-    title: "Abusing 0%",
-    content: (
-      <>
-        AI가 직접 보고 모든 데이터를 1:1로 매칭합니다.
-        <br />단 1원의 오차도 허용하지 않는 정산 시스템을 제공합니다
-      </>
-    ),
-  },
-  {
-    image: value2,
-    title: "통합 관제 OS",
-    content: (
-      <>
-        SK, GS, S-Oil 등 모든 브랜드 주유소를
-        <br />
-        하나의 플랫폼으로 연결합니다.
-      </>
-    ),
-  },
-  {
-    image: value3,
-    title: "AI 마케팅 엔진",
-    content: (
-      <>
-        AI를 활용한 마케팅 전략으로
-        <br />
-        주유소 매출을 극대화합니다.
-      </>
-    ),
-  },
-];
+interface Props {
+  t: (key: string) => string;
+}
 
-export const HomeValue = () => {
+export const HomeValue = ({ t }: Props) => {
+  const values = [
+    {
+      image: value1,
+      title: t("value.items.0.title"),
+      content: (
+        <>
+          {t("value.items.0.content.line1")}
+          <br />
+          {t("value.items.0.content.line2")}
+        </>
+      ),
+    },
+    {
+      image: value2,
+      title: t("value.items.1.title"),
+      content: (
+        <>
+          {t("value.items.1.content.line1")}
+          <br />
+          {t("value.items.1.content.line2")}
+        </>
+      ),
+    },
+    {
+      image: value3,
+      title: t("value.items.2.title"),
+      content: (
+        <>
+          {t("value.items.2.content.line1")}
+          <br />
+          {t("value.items.2.content.line2")}
+        </>
+      ),
+    },
+  ];
+
   return (
     <section className="flex justify-center w-full px-[60px] py-[140px] bg-white">
       <div className="flex flex-col w-full max-w-[1080px]">
         <HoverWrapper>
-          <h2 className="text-[40px] font-semibold">올타의 핵심 가치</h2>
+          <h2 className="text-[40px] font-semibold">{t("value.title")}</h2>
         </HoverWrapper>
 
         <div className="flex flex-col">

@@ -3,10 +3,10 @@ import localFont from "next/font/local";
 import { I18nProvider } from "@/components/provider/i18n";
 import { Navigation } from "@/components/layout/Navigation";
 import { Footer } from "@/components/layout/Footer";
-import "./globals.css";
+import "./../globals.css";
 
 const pretendard = localFont({
-  src: "../../public/fonts/PretendardVariable.woff2",
+  src: "../../../public/fonts/PretendardVariable.woff2",
   display: "swap",
   weight: "100 900",
   variable: "--font-pretendard",
@@ -20,18 +20,19 @@ export const metadata: Metadata = {
 export default async function RootLayout({
   children,
   params,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-  params: { lang: string };
-}>) {
-  const lang = params.lang ?? "ko";
+  params: Promise<{ lang: string }>;
+}) {
+  const { lang } = await params;
+  const displayLang = lang ?? "ko";
 
   return (
-    <html lang="ko" className="h-full antialiased">
+    <html lang={displayLang} className="h-full antialiased">
       <body
         className={`flex flex-col min-h-full pt-[64px] ${pretendard.className} text-black`}
       >
-        <I18nProvider lang={lang}>
+        <I18nProvider lang={displayLang}>
           <Navigation />
 
           <main className="flex-1">{children}</main>

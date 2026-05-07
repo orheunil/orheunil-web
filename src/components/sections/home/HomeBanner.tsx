@@ -19,16 +19,15 @@ export const HomeBanner = ({ t }: Props) => {
     >
       <HoverWrapper>
         <h1 className="text-[32px] md:text-[60px] font-bold leading-[1.1] md:leading-[1.4]">
-          로봇택시 시대를 위한
+          {t("banner.title.line1")}
           <br />
-          모빌리티 결제 플랫폼
+          {t("banner.title.line2")}
         </h1>
       </HoverWrapper>
 
       <HoverWrapper distance={40} delay={0.4}>
         <p className="mt-[24px] text-[18px] md:text-[24px] font-medium">
-          차량의 ID, 위치, 행동 데이터를 검증하여 완전 자동화된 결제 경험을
-          제공합니다.
+          {t("banner.description")}
         </p>
       </HoverWrapper>
 
@@ -40,7 +39,7 @@ export const HomeBanner = ({ t }: Props) => {
               alt="도입 문의하기"
               className="size-[20px] md:size-[24px] mr-[6px]"
             />
-            도입 문의하기
+            {t("banner.cta.contact")}
           </button>
 
           <a
@@ -53,7 +52,7 @@ export const HomeBanner = ({ t }: Props) => {
               alt="IR 자료받기"
               className="size-[20px] md:size-[24px] mr-[6px]"
             />
-            IR 자료받기
+            {t("banner.cta.download")}
           </a>
         </div>
       </HoverWrapper>

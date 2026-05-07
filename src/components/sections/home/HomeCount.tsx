@@ -1,25 +1,40 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import {
   CurrentIndexWrapper,
   NextIndexWrapper,
   PrevIndexWrapper,
 } from "@/components/animation/VerticalScroll";
 
-const contents = [
-  { title: "전국 주유소", value: "10,839" },
-  { title: "자동차 애프터마켓 TAM", value: "100조 원" },
-  { title: "지점당 월 수익 개선", value: "5,000,000원" },
-  { title: "AI 차량 인식 정확도", value: "99.7%" },
-];
-
 export const HomeCount = () => {
+  const { t } = useTranslation("home");
+
   const containerRef = useRef<HTMLDivElement | null>(null);
   const prevIndexRef = useRef(0);
 
   const [index, setIndex] = useState<number>(0);
   const [direction, setDirection] = useState<"UP" | "DOWN">("DOWN");
+
+  const contents = [
+    {
+      title: t("count.items.0.title"),
+      value: t("count.items.0.value"),
+    },
+    {
+      title: t("count.items.1.title"),
+      value: t("count.items.1.value"),
+    },
+    {
+      title: t("count.items.2.title"),
+      value: t("count.items.2.value"),
+    },
+    {
+      title: t("count.items.3.title"),
+      value: t("count.items.3.value"),
+    },
+  ];
 
   const currentItem = contents[index];
   const prevItem = contents[index - 1];
