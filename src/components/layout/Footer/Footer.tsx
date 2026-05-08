@@ -1,12 +1,17 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import { blogIcon, instaIcon, youtubeIcon } from "../../../../public/images";
 
 export const Footer = () => {
+  const pathname = usePathname();
+
   const { t } = useTranslation("common");
+
+  const currentLocale = pathname.split("/")[1];
 
   return (
     <footer className="flex justify-center bg-gray-100 px-[60px]">
@@ -16,10 +21,18 @@ export const Footer = () => {
             <h3 className="font-medium">{t("footer.company.title")}</h3>
 
             <div className="flex flex-col mt-[16px] gap-[8px] text-gray7">
-              <Link href="/company">{t("footer.company.company")}</Link>
-              <Link href="/tech">{t("footer.company.tech")}</Link>
-              <Link href="/solution">{t("footer.company.solution")}</Link>
-              <Link href="/news">{t("footer.company.news")}</Link>
+              <Link href={`/${currentLocale}/company`}>
+                {t("footer.company.company")}
+              </Link>
+              <Link href={`/${currentLocale}/tech`}>
+                {t("footer.company.tech")}
+              </Link>
+              <Link href={`/${currentLocale}/solution`}>
+                {t("footer.company.solution")}
+              </Link>
+              <Link href={`/${currentLocale}/news`}>
+                {t("footer.company.news")}
+              </Link>
             </div>
           </div>
 
