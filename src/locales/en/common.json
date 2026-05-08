@@ -9,32 +9,36 @@
   },
   "footer": {
     "company": {
-      "company": "회사 소개",
-      "service": "서비스",
-      "tech": "기술 소개",
-      "solution": "솔루션",
-      "news": "뉴스룸",
-      "contact": "문의"
+      "title": "Company",
+      "company": "Company",
+      "service": "Services",
+      "tech": "Technology",
+      "solution": "Solutions",
+      "news": "Newsroom",
+      "contact": "Contact"
     },
     "service": {
-      "stores": "세차장 찾기",
-      "app": "앱 다운로드"
+      "title": "Service",
+      "stores": "Find Stores",
+      "app": "Download App"
     },
     "inquiry": {
-      "center": "고객센터",
-      "partnership": "제휴 문의",
+      "title": "Inquiry",
+      "center": "Support",
+      "partnership": "Partnership",
       "ir": "IR"
     },
     "information": {
-      "brn": "사업자 등록번호 : 850-81-02703",
-      "ceo": "대표 : 이승열",
-      "address": "주소 : 경기 하남시 미사강변한강로 SKV1센터"
+      "title": "Orheunil Inc.",
+      "brn": "BRN : 850-81-02703",
+      "ceo": "CEO : Seungyeol Lee",
+      "address": "Address : SK V1 Center, Misagangbyeonhangang-ro, Hanam-si, Gyeonggi-do"
     },
     "terms": {
-      "service": "이용약관",
-      "privacy": "개인정보처리방침",
-      "policy": "운영정책",
-      "location": "위치기반서비스 이용약관"
+      "service": "Terms",
+      "privacy": "Privacy",
+      "policy": "Policy",
+      "location": "Location Terms"
     }
   }
 }
