@@ -15,9 +15,12 @@ export const HomeNews = ({ t }: Props) => {
           <div className="flex justify-between items-center">
             <h2 className="text-[40px] font-semibold">최근 소식</h2>
 
-            <div className="flex justify-center items-center px-[16px] py-[8px] text-white text-[16px] font-semibold bg-black rounded-[50px]">
+            <Link
+              href="/news"
+              className="flex justify-center items-center px-[16px] py-[8px] text-white text-[16px] font-semibold bg-black rounded-[50px]"
+            >
               더보기
-            </div>
+            </Link>
           </div>
         </HoverWrapper>
 
