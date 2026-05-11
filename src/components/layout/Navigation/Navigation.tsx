@@ -2,11 +2,16 @@
 
 import { useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
-import { useTranslation } from "react-i18next";
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 import { useResizeHandler } from "@/hooks";
-import { closeIcon, hamburgerIcon, navLogo } from "../../../../public/images";
+import {
+  arrowDown,
+  closeIcon,
+  hamburgerIcon,
+  navLogo,
+} from "../../../../public/images";
 
 export const Navigation = () => {
   const router = useRouter();
@@ -16,6 +21,7 @@ export const Navigation = () => {
   const { isDesktop } = useResizeHandler();
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [showLocales, setShowLocales] = useState<boolean>(false);
 
   const menus = [
     {
@@ -50,6 +56,8 @@ export const Navigation = () => {
     const segments = pathname.split("/");
     segments[1] = lang;
 
+    setIsOpen(false);
+
     return router.push(segments.join("/"));
   };
 
@@ -62,12 +70,59 @@ export const Navigation = () => {
               <Image src={navLogo} alt="올타" className="w-[62px]" />
             </Link>
 
-            <div className="flex gap-[60px] font-semibold">
-              {menus.map((value, index) => (
-                <Link key={index} href={`/${currentLocale}${value.route}`}>
-                  {value.title}
-                </Link>
-              ))}
+            <div className="flex items-center gap-[60px] font-semibold">
+              {menus.map((value, index) => {
+                if (value.route === "/service") {
+                  return (
+                    <a
+                      key={index}
+                      href="https://www.allta.io"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {value.title}
+                    </a>
+                  );
+                }
+                return (
+                  <Link key={index} href={`/${currentLocale}${value.route}`}>
+                    {value.title}
+                  </Link>
+                );
+              })}
+
+              <div
+                onClick={() => setShowLocales(!showLocales)}
+                className="relative flex items-center cursor-pointer"
+              >
+                {currentLocale.toUpperCase()}
+
+                <Image
+                  src={arrowDown}
+                  alt={currentLocale.toUpperCase()}
+                  className={`size-[20px] ml-[4px] duration-300 ${
+                    showLocales ? "rotate-180" : "rotate-0"
+                  }`}
+                />
+
+                {showLocales && (
+                  <div className="absolute flex flex-col top-[30px] right-0 bg-white rounded-[6px]">
+                    <button
+                      onClick={handleChangeLocales("ko")}
+                      className="px-[20px] py-[8px] cursor-pointer"
+                    >
+                      KO
+                    </button>
+
+                    <button
+                      onClick={handleChangeLocales("en")}
+                      className="px-[20px] py-[8px] cursor-pointer"
+                    >
+                      EN
+                    </button>
+                  </div>
+                )}
+              </div>
             </div>
           </nav>
         </header>

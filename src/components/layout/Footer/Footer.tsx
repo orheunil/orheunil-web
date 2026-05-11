@@ -41,7 +41,13 @@ export const Footer = () => {
 
             <div className="flex flex-col mt-[16px] gap-[8px] text-gray7">
               <p>{t("footer.service.stores")}</p>
-              <p>{t("footer.service.app")}</p>
+              <a
+                href="https://www.allta.io"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {t("footer.service.app")}
+              </a>
             </div>
           </div>
 

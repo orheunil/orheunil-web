@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo } from "react";
 import { I18nextProvider } from "react-i18next";
-import { initClientI18n } from "@/utils/i18n-client";
+import { initClientI18n } from "@/utils";
 
 export const I18nProvider = ({
   lang,

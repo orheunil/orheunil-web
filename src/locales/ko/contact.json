@@ -1,0 +1,13 @@
+{
+  "title": "문의",
+  "subtitle": "제휴 및 서비스 관련 문의를 남겨주시면, 빠른 시일 내에 답변을 드리겠습니다.",
+  "name": "이름",
+  "namePlaceholder": "이름을 입력해주세요.",
+  "email": "이메일",
+  "emailPlaceholder": "이메일을 입력해주세요.",
+  "phone": "전화번호",
+  "phonePlaceholder": "전화번호를 입력해주세요.",
+  "content": "문의 내용을",
+  "contentPlaceholder": "문의 내용을 입력해주세요.",
+  "cta": "문의하기"
+}

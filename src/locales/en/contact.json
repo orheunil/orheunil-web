@@ -1,0 +1,13 @@
+{
+  "title": "Contact",
+  "subtitle": "Please leave your inquiry regarding partnerships or services, and we will get back to you as soon as possible.",
+  "name": "Name",
+  "namePlaceholder": "Please enter your name.",
+  "email": "Email",
+  "emailPlaceholder": "Please enter your email.",
+  "phone": "Phone Number",
+  "phonePlaceholder": "Please enter your phone number.",
+  "content": "Message",
+  "contentPlaceholder": "Please enter your message.",
+  "cta": "Submit"
+}
