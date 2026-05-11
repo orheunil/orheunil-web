@@ -2,8 +2,10 @@
 
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { EmailForm } from "@/types";
+import { SyncLoader } from "react-spinners";
 import { regexEmail } from "@/utils";
+import { EmailForm } from "@/types";
+import { colors } from "@/styles";
 
 export const InquiryForm = () => {
   const [form, setForm] = useState<EmailForm>({
@@ -24,6 +26,15 @@ export const InquiryForm = () => {
         [key]: e.target.value,
       }));
     };
+
+  const handlePhoneNumber = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value.replace(/[^0-9-]/g, "");
+
+    setForm((prev) => ({
+      ...prev,
+      phoneNumber: value,
+    }));
+  };
 
   const handleSubmit = async () => {
     if (!form.name.trim().length) {
@@ -80,6 +91,12 @@ export const InquiryForm = () => {
 
   return (
     <section className="flex flex-col items-center w-full min-h-[calc(100vh-64px)] px-[20px] md:px-[60px] bg-white">
+      {isLoading && (
+        <div className="fixed inset-0 flex justify-center items-center w-screen h-full bg-black/50 z-[99]">
+          <SyncLoader color={colors.white} />
+        </div>
+      )}
+
       <div className="flex flex-col w-full max-w-[1080px]">
         <div className="flex flex-col text-start md:text-center pt-[60px] pb-[40px]">
           <h1 className="text-start md:text-center text-[28px] md:text-[36px] lg:text-[40px] font-semibold">
@@ -116,7 +133,7 @@ export const InquiryForm = () => {
             <p className="text-[16px]">{t("phone")} *</p>
             <input
               value={form.phoneNumber}
-              onChange={handleChange("phoneNumber")}
+              onChange={handlePhoneNumber}
               placeholder={t("phonePlaceholder")}
               className="mt-[8px] p-[16px] text-[16px] border border-line rounded-[8px]"
             />
@@ -134,6 +151,7 @@ export const InquiryForm = () => {
 
           <button
             onClick={handleSubmit}
+            disabled={isLoading}
             className="w-full md:w-[180px] h-[60px] text-[18px] text-white font-semibold bg-main rounded-[16px] cursor-pointer"
           >
             {t("cta")}
