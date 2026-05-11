@@ -13,13 +13,13 @@ export const HomeNews = ({ t }: Props) => {
       <div className="flex flex-col w-full max-w-[1080px]">
         <HoverWrapper>
           <div className="flex justify-between items-center">
-            <h2 className="text-[40px] font-semibold">최근 소식</h2>
+            <h2 className="text-[40px] font-semibold">{t("news.title")}</h2>
 
             <Link
               href="/news"
               className="flex justify-center items-center px-[16px] py-[8px] text-white text-[16px] font-semibold bg-black rounded-[50px]"
             >
-              더보기
+              {t("news.cta")}
             </Link>
           </div>
         </HoverWrapper>
