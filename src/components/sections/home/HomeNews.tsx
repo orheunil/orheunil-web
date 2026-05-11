@@ -1,13 +1,13 @@
-import Image from "next/image";
+import Link from "next/link";
 import { HoverWrapper } from "@/components/animation/Hover";
 import { newsList } from "@/contants";
-import Link from "next/link";
 
 interface Props {
+  lang: string;
   t: (key: string) => string;
 }
 
-export const HomeNews = ({ t }: Props) => {
+export const HomeNews = ({ lang, t }: Props) => {
   return (
     <section className="flex justify-center w-full px-[60px] py-[140px] bg-white">
       <div className="flex flex-col w-full max-w-[1080px]">
@@ -16,7 +16,7 @@ export const HomeNews = ({ t }: Props) => {
             <h2 className="text-[40px] font-semibold">{t("news.title")}</h2>
 
             <Link
-              href="/news"
+              href={`/${lang}/news`}
               className="flex justify-center items-center px-[16px] py-[8px] text-white text-[16px] font-semibold bg-black rounded-[50px]"
             >
               {t("news.cta")}

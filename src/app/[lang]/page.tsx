@@ -22,8 +22,8 @@ export default async function Home({
       <HomeBanner t={t} />
       <HomeValue t={t} />
       <HomeCount />
-      <HomeNews t={t} />
-      <HomeContact t={t} />
+      <HomeNews lang={lang} t={t} />
+      <HomeContact lang={lang} t={t} />
     </div>
   );
 }
