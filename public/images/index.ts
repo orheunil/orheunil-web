@@ -1,6 +1,7 @@
 // 공통
 export { default as navLogo } from "./nav-logo.png";
 export { default as hamburgerIcon } from "./hamburger-icon.png";
+export { default as arrowDown } from "./arrow-down.png";
 export { default as instaIcon } from "./insta-icon.png";
 export { default as youtubeIcon } from "./youtube-icon.png";
 export { default as blogIcon } from "./blog-icon.png";
@@ -20,7 +21,8 @@ export { default as companyBanner } from "./company-banner.png";
 export { default as companyStep1 } from "./company-step-1.png";
 export { default as companyStep2 } from "./company-step-2.png";
 export { default as companyStep3 } from "./company-step-3.png";
-export { default as companyHistory } from "./company-history.png";
+export { default as companyHistoryKo } from "./company-history-ko.png";
+export { default as companyHistoryEn } from "./company-history-en.png";
 
 // 기술소개
 export { default as cctvImage } from "./cctv-image.png";
@@ -40,3 +42,8 @@ export { default as solution5 } from "./solution-5.png";
 export { default as phoneImage } from "./phone-image.png";
 export { default as checkIcon } from "./check-icon.png";
 export { default as arrowWhite } from "./arrow-white.png";
+
+// 뉴스
+export { default as newsImage1 } from "./news-image-1.jpg";
+export { default as newsImage2 } from "./news-image-2.png";
+export { default as newsImage3 } from "./news-image-3.png";

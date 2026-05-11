@@ -19,7 +19,7 @@ export default async function Company({
     <div className="flex flex-col w-full">
       <CompanyBanner t={t} />
       <CompanyStep t={t} />
-      <CompanyHistory t={t} />
+      <CompanyHistory lang={lang} t={t} />
     </div>
   );
 }
