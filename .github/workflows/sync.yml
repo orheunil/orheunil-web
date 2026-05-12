@@ -1,4 +1,4 @@
-name: Sync Fork
+name: Sync Private Upstream
 
 on:
   schedule:
@@ -14,14 +14,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout fork repo
+      - name: Checkout personal repo
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          token: ${{ secrets.GH_PAT }}
 
       - name: Sync upstream
         run: |
-          git remote add upstream https://github.com/Orheunil-Dev/orheunil-web.git
+          git remote remove upstream || true
+          git remote add upstream https://${{ secrets.GH_PAT }}@github.com/Orheunil-Dev/orheunil-web.git
+
           git fetch upstream
           git checkout master
           git merge upstream/master --no-edit
