@@ -1,4 +1,12 @@
+import type { Metadata } from "next";
 import { terms } from "@/contants";
+
+export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 export default async function Terms({
   params,
