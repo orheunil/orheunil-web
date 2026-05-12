@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { I18nProvider } from "@/components/provider/i18n";
-import { Navigation } from "@/components/layout/Navigation";
-import { Footer } from "@/components/layout/Footer";
 
 const pretendard = localFont({
   src: "../../../public/fonts/PretendardVariable.woff2",
@@ -74,13 +72,7 @@ export default async function LocaleLayout({
       <body
         className={`flex flex-col min-h-full pt-[64px] ${pretendard.className} text-black`}
       >
-        <I18nProvider lang={displayLang}>
-          <Navigation />
-
-          <main className="flex-1">{children}</main>
-
-          <Footer />
-        </I18nProvider>
+        <I18nProvider lang={displayLang}>{children}</I18nProvider>
       </body>
     </html>
   );

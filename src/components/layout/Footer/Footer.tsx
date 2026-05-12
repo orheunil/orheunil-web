@@ -83,16 +83,32 @@ export const Footer = () => {
 
           {/* 약관 */}
           <div className="flex flex-wrap items-center mt-[20px] gap-x-[20px] gap-y-[8px] text-[13px] font-semibold">
-            <Link href={`/${currentLocale}/terms/service`}>
+            <Link
+              href={`/${currentLocale}/terms/service`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {t("footer.terms.service")}
             </Link>
-            <Link href={`/${currentLocale}/terms/privacy`}>
+            <Link
+              href={`/${currentLocale}/terms/privacy`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {t("footer.terms.privacy")}
             </Link>
-            <Link href={`/${currentLocale}/terms/policy`}>
+            <Link
+              href={`/${currentLocale}/terms/policy`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {t("footer.terms.policy")}
             </Link>
-            <Link href={`/${currentLocale}/terms/location`}>
+            <Link
+              href={`/${currentLocale}/terms/location`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {t("footer.terms.location")}
             </Link>
           </div>
