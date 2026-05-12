@@ -83,10 +83,18 @@ export const Footer = () => {
 
           {/* 약관 */}
           <div className="flex flex-wrap items-center mt-[20px] gap-x-[20px] gap-y-[8px] text-[13px] font-semibold">
-            <button>{t("footer.terms.service")}</button>
-            <button>{t("footer.terms.privacy")}</button>
-            <button>{t("footer.terms.policy")}</button>
-            <button>{t("footer.terms.location")}</button>
+            <Link href={`/${currentLocale}/terms/service`}>
+              {t("footer.terms.service")}
+            </Link>
+            <Link href={`/${currentLocale}/terms/privacy`}>
+              {t("footer.terms.privacy")}
+            </Link>
+            <Link href={`/${currentLocale}/terms/policy`}>
+              {t("footer.terms.policy")}
+            </Link>
+            <Link href={`/${currentLocale}/terms/location`}>
+              {t("footer.terms.location")}
+            </Link>
           </div>
 
           {/* SNS */}

@@ -106,7 +106,12 @@ export const Navigation = () => {
                 />
 
                 {showLocales && (
-                  <div className="absolute flex flex-col top-[30px] right-0 bg-white rounded-[6px]">
+                  <div
+                    className="absolute flex flex-col top-[30px] right-0 bg-white rounded-[6px]"
+                    style={{
+                      boxShadow: "0 4px 10px 2px rgba(28, 28, 44, 0.2)",
+                    }}
+                  >
                     <button
                       onClick={handleChangeLocales("ko")}
                       className="px-[20px] py-[8px] cursor-pointer"
