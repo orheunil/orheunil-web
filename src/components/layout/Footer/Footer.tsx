@@ -55,7 +55,7 @@ export const Footer = () => {
             <h3 className="font-medium">{t("footer.inquiry.title")}</h3>
 
             <div className="flex flex-col mt-[16px] gap-[8px] text-gray7">
-              <p>{t("footer.inquiry.center")}</p>
+              <p>{t("footer.inquiry.faq")}</p>
               <p>{t("footer.inquiry.partnership")}</p>
               <p>{t("footer.inquiry.ir")}</p>
             </div>

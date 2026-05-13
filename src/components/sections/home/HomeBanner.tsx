@@ -36,7 +36,7 @@ export const HomeBanner = ({ t }: Props) => {
           <button className="flex justify-center items-center w-full md:w-[160px] h-[44px] md:h-[50px] text-white text-[14px] md:text-[18px] font-semibold bg-main rounded-[12px]">
             <Image
               src={contactIcon}
-              alt="도입 문의하기"
+              alt={t("banner.cta.contact")}
               className="size-[20px] md:size-[24px] mr-[6px]"
             />
             {t("banner.cta.contact")}
@@ -49,7 +49,7 @@ export const HomeBanner = ({ t }: Props) => {
           >
             <Image
               src={downloadIcon}
-              alt="IR 자료받기"
+              alt={t("banner.cta.download")}
               className="size-[20px] md:size-[24px] mr-[6px]"
             />
             {t("banner.cta.download")}

@@ -1,0 +1,58 @@
+{
+  "banner": {
+    "title": {
+      "line1": "Connecting gas station infrastructure with AI",
+      "line2": "and leading the Standard OS for the robotaxi era"
+    },
+    "items": [
+      {
+        "label": "SOM",
+        "value": "$870M"
+      },
+      {
+        "label": "2030 ARPU",
+        "value": "$1K"
+      },
+      {
+        "label": "2030 Revenue",
+        "value": "$36M"
+      }
+    ]
+  },
+  "market": {
+    "title": "Allta’s Market Opportunity",
+    "items": [
+      {
+        "label": {
+          "line1": "TAM",
+          "line2": "(Total Addressable Market)"
+        },
+        "description": "Entire automotive aftermarket industry"
+      },
+      {
+        "label": {
+          "line1": "SAM",
+          "line2": "(Serviceable Available Market)"
+        },
+        "description": "Fuel Retail + Car Wash + IT"
+      },
+      {
+        "label": {
+          "line1": "SOM",
+          "line2": "(Serviceable Obtainable Market)"
+        },
+        "description": "SaaS monitoring + Car wash fees + Data"
+      }
+    ]
+  },
+  "growth": {
+    "title": "Allta Growth Chart"
+  },
+  "download": {
+    "title": {
+      "line1": "Building a new standard ",
+      "line2": "for mobility operations"
+    },
+    "cta": "Download IR"
+  }
+}

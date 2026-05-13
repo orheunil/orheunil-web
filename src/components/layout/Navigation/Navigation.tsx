@@ -45,8 +45,8 @@ export const Navigation = () => {
       route: "/news",
     },
     {
-      title: t("navigation.contact"),
-      route: "/contact",
+      title: t("navigation.ir"),
+      route: "/ir",
     },
   ];
 

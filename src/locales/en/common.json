@@ -5,7 +5,7 @@
     "tech": "Technology",
     "solution": "Solutions",
     "news": "News",
-    "contact": "Contact"
+    "ir": "IR"
   },
   "footer": {
     "company": {
@@ -24,7 +24,7 @@
     },
     "inquiry": {
       "title": "Inquiry",
-      "center": "Support",
+      "faq": "FAQ",
       "partnership": "Partnership",
       "ir": "IR"
     },

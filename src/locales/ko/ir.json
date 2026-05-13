@@ -1,0 +1,58 @@
+{
+  "banner": {
+    "title": {
+      "line1": "AI로 주유소 인프라를 연결하고",
+      "line2": "로봇택시 시대의 Standard OS를 선점합니다"
+    },
+    "items": [
+      {
+        "label": "SOM",
+        "value": "1.2조 원"
+      },
+      {
+        "label": "2030 ARPU",
+        "value": "150만"
+      },
+      {
+        "label": "2030 매출",
+        "value": "500억 원"
+      }
+    ]
+  },
+  "market": {
+    "title": "올타의 시장 기회",
+    "items": [
+      {
+        "label": {
+          "line1": "TAM",
+          "line2": "(Total Addressable Market)"
+        },
+        "description": "자동차 애프터마켓 전반"
+      },
+      {
+        "label": {
+          "line1": "SAM",
+          "line2": "(Serviceable Available Market)"
+        },
+        "description": "유류소매 + 세차 + IT"
+      },
+      {
+        "label": {
+          "line1": "SOM",
+          "line2": "(Serviceable Obtainable Market)"
+        },
+        "description": "SaaS 관제 + 세차 수수료 + 데이터"
+      }
+    ]
+  },
+  "growth": {
+    "title": "올타 성장 차트"
+  },
+  "download": {
+    "title": {
+      "line1": "모빌리티 운영의 새로운 ",
+      "line2": "기준을 만들어갑니다"
+    },
+    "cta": "IR 자료받기"
+  }
+}

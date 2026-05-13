@@ -47,3 +47,22 @@ export { default as arrowWhite } from "./arrow-white.png";
 export { default as newsImage1 } from "./news-image-1.jpg";
 export { default as newsImage2 } from "./news-image-2.png";
 export { default as newsImage3 } from "./news-image-3.png";
+
+// IR
+export { default as marketKo1 } from "./market-ko-1.png";
+export { default as marketKo2 } from "./market-ko-2.png";
+export { default as marketKo3 } from "./market-ko-3.png";
+export { default as marketMobileKo1 } from "./market-m-ko-1.png";
+export { default as marketMobileKo2 } from "./market-m-ko-2.png";
+export { default as marketMobileKo3 } from "./market-m-ko-3.png";
+export { default as marketEn1 } from "./market-en-1.png";
+export { default as marketEn2 } from "./market-en-2.png";
+export { default as marketEn3 } from "./market-en-3.png";
+export { default as marketMobileEn1 } from "./market-m-en-1.png";
+export { default as marketMobileEn2 } from "./market-m-en-2.png";
+export { default as marketMobileEn3 } from "./market-m-en-3.png";
+export { default as marketChartKo } from "./market-chart-ko.png";
+export { default as marketChartMobileKo } from "./market-chart-m-ko.png";
+export { default as marketChartEn } from "./market-chart-en.png";
+export { default as marketChartMobileEn } from "./market-chart-m-en.png";
+export { default as whiteDownloadIcon } from "./white-dowload-icon.png";
