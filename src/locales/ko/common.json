@@ -5,7 +5,7 @@
     "tech": "기술 소개",
     "solution": "솔루션",
     "news": "뉴스룸",
-    "contact": "문의"
+    "ir": "IR"
   },
   "footer": {
     "company": {
@@ -24,7 +24,7 @@
     },
     "inquiry": {
       "title": "문의",
-      "center": "고객센터",
+      "faq": "자주 묻는 질문",
       "partnership": "제휴 문의",
       "ir": "IR"
     },

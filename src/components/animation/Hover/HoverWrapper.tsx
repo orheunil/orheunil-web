@@ -10,7 +10,11 @@ interface Props {
   delay?: number;
   threshold?: number;
   direction?: "UP" | "DOWN" | "RIGHT" | "LEFT";
+  display?: CSSProperties["display"];
+  flexDirection?: CSSProperties["flexDirection"];
   flex?: CSSProperties["flex"];
+  justifyContent?: CSSProperties["justifyContent"];
+  alignItems?: CSSProperties["alignItems"];
   width?: CSSProperties["width"];
   children: React.ReactNode;
 }
@@ -20,7 +24,11 @@ export const HoverWrapper = ({
   delay = 0,
   threshold = 0.9,
   direction = "UP",
+  display,
+  flexDirection,
   flex,
+  justifyContent,
+  alignItems,
   width,
   children,
 }: Props) => {
@@ -66,6 +74,10 @@ export const HoverWrapper = ({
       <div
         ref={elRef}
         style={{
+          display,
+          flexDirection,
+          justifyContent,
+          alignItems,
           transform,
           opacity: 0,
         }}
