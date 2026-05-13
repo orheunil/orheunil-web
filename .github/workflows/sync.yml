@@ -20,6 +20,11 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.GH_PAT }}
 
+      - name: Configure Git
+        run: |
+          git config --global user.name "orheunil"
+          git config --global user.email "orheunil@orheun.com"
+
       - name: Sync upstream
         run: |
           git remote remove upstream || true
