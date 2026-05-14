@@ -28,7 +28,7 @@ export const FaqList = () => {
     <section className="flex flex-col justify-center items-center w-full bg-white">
       <div className="flex flex-col w-full pt-[60px]">
         <h1 className="px-[20px] text-start md:text-center text-[28px] md:text-[36px] lg:text-[40px] font-semibold">
-          자주 묻는 질문
+          {t("title")}
         </h1>
 
         <div className="flex justify-center items-center w-full mt-[40px] px-[20px] gap-[32px] text-[16px] md:text-[20px] font-semibold border-b border-b-line">
@@ -36,7 +36,7 @@ export const FaqList = () => {
             onClick={() => setCategory(null)}
             className={`relative py-[12px] cursor-pointer ${!category ? "text-main border-b-[2px] border-b-main" : "text-gray4"}`}
           >
-            전체
+            {t("all")}
           </button>
 
           {faqList.map((value, index) => (
@@ -45,22 +45,9 @@ export const FaqList = () => {
               onClick={() => setCategory(value.category)}
               className={`relative py-[12px] cursor-pointer ${category === value.category ? "text-main border-b-[2px] border-b-main" : "text-gray4"}`}
             >
-              {value.label}
+              {t(value.labelKey)}
             </button>
           ))}
-
-          {/* <button
-            onClick={() => setCategory("SERVICE")}
-            className={`relative py-[12px] cursor-pointer ${category === "SERVICE" ? "text-main border-b-[2px] border-b-main" : "text-gray4"}`}
-          >
-            서비스 이용
-          </button>
-          <button
-            onClick={() => setCategory("PARTNERSHIP")}
-            className={`relative py-[12px] cursor-pointer ${category === "PARTNERSHIP" ? "text-main border-b-[2px] border-b-main" : "text-gray4"}`}
-          >
-            제휴 문의
-          </button> */}
         </div>
       </div>
 
@@ -81,7 +68,7 @@ export const FaqList = () => {
                       <span className="mr-[12px] text-gray5 font-medium">
                         Q
                       </span>
-                      <p>{value.question}</p>
+                      <p>{t(value.questionKey)}</p>
                     </div>
 
                     <Image
@@ -96,7 +83,7 @@ export const FaqList = () => {
                   {isOpen && (
                     <div className="px-[24px] py-[20px] bg-gray1 rounded-[12px]">
                       <p className="text-[#585858] whitespace-pre-line">
-                        {value.answer}
+                        {t(value.answerKey)}
                       </p>
                     </div>
                   )}

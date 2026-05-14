@@ -1,0 +1,101 @@
+{
+  "title": "FAQ",
+  "all": "All",
+
+  "signup": {
+    "label": "Signup & Payment",
+
+    "q1": {
+      "question": "How can I sign up?",
+      "answer": "You can easily sign up using Kakao, Google, or Apple accounts."
+    },
+
+    "q2": {
+      "question": "How can I delete my account?",
+      "answer": "You can delete your account by going to [Settings] and selecting the [Delete Account] button at the bottom.\nRefunds are not available if the subscription has been used at least once or if more than 15 days have passed since the payment date.\nFor more information, please contact customer support at +82-1668-1620."
+    },
+
+    "q3": {
+      "question": "How can I change my account information?",
+      "answer": "Go to [My Info] in the bottom menu and tap the pencil icon at the top to edit your information."
+    },
+
+    "q4": {
+      "question": "Can I register only one vehicle?",
+      "answer": "You can register multiple vehicles without limitation. However, subscriptions and single-use passes can only be assigned to one vehicle.\nWe are planning to introduce products that support multiple vehicles in the future."
+    },
+
+    "q5": {
+      "question": "How can I subscribe?",
+      "answer": "You can easily subscribe by selecting your preferred partner location in the Allta app and tapping the monthly subscription button."
+    },
+
+    "q6": {
+      "question": "How can I cancel my subscription?",
+      "answer": "You can cancel your subscription directly from [Subscription Management] under [My Info]."
+    },
+
+    "q7": {
+      "question": "Will I still be charged if I don't use the car wash?",
+      "answer": "Yes. Since this is a monthly subscription service, payments are automatically charged every month regardless of usage."
+    }
+  },
+
+  "service": {
+    "label": "Service",
+
+    "q1": {
+      "question": "How many times can I wash my car per day?",
+      "answer": "With a monthly subscription, you can use the automatic car wash once per day."
+    },
+
+    "q2": {
+      "question": "Where can I check nearby partner locations?",
+      "answer": "The Allta app automatically shows the nearest partner locations based on your current location."
+    },
+
+    "q3": {
+      "question": "Do services differ by partner location?",
+      "answer": "Automatic car washing is provided at all partner locations, while some locations may offer additional services such as high-pressure washing, drying, or shampoo application."
+    },
+
+    "q4": {
+      "question": "Can I use other partner locations besides my subscribed one?",
+      "answer": "Monthly subscriptions are tied to a specific partner location.\nTo use another location, you need to subscribe separately for that location."
+    },
+
+    "q5": {
+      "question": "Can I change my subscribed partner location?",
+      "answer": "Yes. You can cancel your current subscription and subscribe to another partner location."
+    }
+  },
+
+  "partnership": {
+    "label": "Partnership",
+
+    "q1": {
+      "question": "How does the Allta partnership process work?",
+      "answer": "You can apply for partnership easily through our website, and our 담당자가 will contact you with details about partnership conditions and operations.\nYou may also call customer support at +82-1668-1620."
+    },
+
+    "q2": {
+      "question": "Are there any requirements for partnership?",
+      "answer": "Basically, you must own an automatic car wash machine. Detailed requirements will be explained during consultation."
+    },
+
+    "q3": {
+      "question": "How is revenue shared?",
+      "answer": "Revenue is distributed based on monthly subscription income according to an agreed ratio with partner locations.\nSettlements are processed automatically every month with transparent records."
+    },
+
+    "q4": {
+      "question": "Will customer support or operations become burdensome?",
+      "answer": "Since customers use the app with automatic payments and reservations, operational burden on partner locations is minimal."
+    },
+
+    "q5": {
+      "question": "Will there be confusion with existing customers?",
+      "answer": "Existing customers can continue using services as usual, while Allta subscription users reserve through the app, allowing smooth operation without confusion."
+    }
+  }
+}
