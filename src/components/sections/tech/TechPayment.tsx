@@ -25,7 +25,7 @@ export const TechPayment = ({ t }: Props) => {
   return (
     <section className="flex flex-col justify-center items-center w-full px-[20px] md:px-[60px] py-[140px] bg-white">
       <div className="flex flex-col w-full max-w-[1080px] mt-[60px] gap-[60px]">
-        <HoverWrapper direction="RIGHT" width="100%">
+        <HoverWrapper threshold={0.9} width="100%">
           <h2 className="text-[24px] md:text-[32px] lg:text-[40px] font-semibold">
             {t("payment.title.line1")}
             <br />
@@ -38,7 +38,7 @@ export const TechPayment = ({ t }: Props) => {
         </HoverWrapper>
 
         <div className="flex flex-col lg:flex-row lg:items-center gap-[32px] lg:gap-[32px]">
-          <HoverWrapper direction="RIGHT" width="100%">
+          <HoverWrapper threshold={0.9} width="100%">
             <Image
               src={paymentImage}
               alt="결제 트리거"
@@ -46,7 +46,7 @@ export const TechPayment = ({ t }: Props) => {
             />
           </HoverWrapper>
 
-          <HoverWrapper direction="RIGHT" width="100%">
+          <HoverWrapper threshold={0.9} width="100%">
             <div className="flex flex-col gap-[28px]">
               {items.map((value, index) => (
                 <article key={index} className="flex flex-col">

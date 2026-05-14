@@ -9,6 +9,7 @@ interface Props {
   distance?: number;
   delay?: number;
   threshold?: number;
+  duration?: number;
   direction?: "UP" | "DOWN" | "RIGHT" | "LEFT";
   display?: CSSProperties["display"];
   flexDirection?: CSSProperties["flexDirection"];
@@ -23,6 +24,7 @@ export const HoverWrapper = ({
   distance = 100,
   delay = 0,
   threshold = 0.9,
+  duration = 1,
   direction = "UP",
   display,
   flexDirection,
@@ -54,7 +56,7 @@ export const HoverWrapper = ({
           x: 0,
           y: 0,
           opacity: 1,
-          duration: 1,
+          duration,
           ease: "power3.out",
           delay,
         });

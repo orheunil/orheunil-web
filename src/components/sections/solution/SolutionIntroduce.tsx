@@ -44,35 +44,29 @@ export const SolutionIntroduce = ({ t }: Props) => {
   return (
     <section className="flex flex-col justify-center items-center w-full min-h-[calc(100vh-64px)] px-[20px] md:px-[60px] py-[140px] bg-white">
       <div className="flex flex-col w-full max-w-[1080px]">
-        <HoverWrapper direction="RIGHT">
-          <h1 className="text-[28px] md:text-[36px] lg:text-[40px] font-semibold leading-[1.1] md:leading-[1.4]">
-            {t("introduce.title.line1")}
-            <br />
-            {t("introduce.title.line2")}
-          </h1>
-        </HoverWrapper>
+        <h1 className="text-[28px] md:text-[36px] lg:text-[40px] font-semibold leading-[1.1] md:leading-[1.4]">
+          {t("introduce.title.line1")}
+          <br />
+          {t("introduce.title.line2")}
+        </h1>
 
         <div className="flex flex-col lg:flex-row flex-wrap justify-center mt-[60px] gap-[20px]">
           {items.map((value, index) => (
-            <HoverWrapper
+            <div
               key={index}
-              threshold={0.1}
-              delay={0.4 + index * 0.2}
-              direction="RIGHT"
+              className="flex flex-col p-[24px] w-full lg:max-w-[346px] border border-line rounded-[20px]"
             >
-              <div className="flex flex-col p-[24px] w-full lg:max-w-[346px] border border-line rounded-[20px]">
-                <Image
-                  src={value.image}
-                  alt={value.title}
-                  className="size-[40px]"
-                />
+              <Image
+                src={value.image}
+                alt={value.title}
+                className="size-[40px]"
+              />
 
-                <h3 className="mt-[20px] text-[20px] font-semibold">
-                  {value.title}
-                </h3>
-                <p className="mt-[8px] text-[16px]">{value.content}</p>
-              </div>
-            </HoverWrapper>
+              <h3 className="mt-[20px] text-[20px] font-semibold">
+                {value.title}
+              </h3>
+              <p className="mt-[8px] text-[16px]">{value.content}</p>
+            </div>
           ))}
         </div>
       </div>

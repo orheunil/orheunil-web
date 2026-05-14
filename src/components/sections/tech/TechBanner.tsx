@@ -11,7 +11,7 @@ export const TechBanner = ({ t }: Props) => {
     <section className="flex flex-col justify-center items-center w-full min-h-[calc(100vh-64px)] px-[20px] md:px-[60px] bg-[#000000] overflow-hidden">
       <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center w-full max-w-[1460px] gap-[40px] lg:gap-[20px]">
         <div className="flex flex-col">
-          <HoverWrapper direction="RIGHT">
+          <HoverWrapper distance={0} duration={1.5}>
             <h1 className="text-white text-[32px] lg:text-[60px] font-bold eading-[1.4] whitespace-nowrap">
               {t("banner.title.line1")}
               <br />
@@ -24,7 +24,7 @@ export const TechBanner = ({ t }: Props) => {
             </h1>
           </HoverWrapper>
 
-          <HoverWrapper distance={40} direction="RIGHT" delay={0.4}>
+          <HoverWrapper distance={0} delay={0.5} duration={1.5}>
             <p className="mt-[24px] text-white/85 text-[14px] md:text-[18px] lg:text-[24px] font-medium whitespace-nowrap">
               {t("banner.description.line1")}
               <br />
@@ -37,10 +37,10 @@ export const TechBanner = ({ t }: Props) => {
 
         <div className="w-full max-w-full lg:max-w-[800px]">
           <HoverWrapper
-            delay={0.8}
-            distance={120}
-            direction="LEFT"
+            delay={1}
+            distance={0}
             threshold={0.4}
+            duration={1.5}
             flex={1}
           >
             <Image src={cctvImage} alt="기술소개" className="w-full" />
