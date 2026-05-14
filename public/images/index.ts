@@ -1,5 +1,6 @@
 // 공통
-export { default as navLogo } from "./nav-logo.png";
+export { default as navLogoKo } from "./nav-logo-ko.png";
+export { default as navLogoEn } from "./nav-logo-en.png";
 export { default as hamburgerIcon } from "./hamburger-icon.png";
 export { default as arrowDown } from "./arrow-down.png";
 export { default as instaIcon } from "./insta-icon.png";
