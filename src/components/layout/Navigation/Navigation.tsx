@@ -10,7 +10,8 @@ import {
   arrowDown,
   closeIcon,
   hamburgerIcon,
-  navLogo,
+  navLogoEn,
+  navLogoKo,
 } from "../../../../public/images";
 
 export const Navigation = () => {
@@ -67,7 +68,11 @@ export const Navigation = () => {
         <header className="fixed flex justify-center items-center top-0 w-screen h-[64px] px-[20px] md:px-[60px] bg-white z-[1]">
           <nav className="flex justify-between w-full max-w-[1080px]">
             <Link href={`/${currentLocale}`}>
-              <Image src={navLogo} alt="올타" className="w-[62px]" />
+              {currentLocale === "en" ? (
+                <Image src={navLogoEn} alt="Allta" className="w-[104px]" />
+              ) : (
+                <Image src={navLogoKo} alt="올타" className="w-[62px]" />
+              )}
             </Link>
 
             <div className="flex items-center gap-[60px] font-semibold">
@@ -136,7 +141,11 @@ export const Navigation = () => {
           <nav className="flex flex-col w-full">
             <div className="flex justify-between items-center w-full h-[64px] px-[20px] bg-white">
               <Link href={`/${currentLocale}`} onClick={() => setIsOpen(false)}>
-                <Image src={navLogo} alt="올타" className="w-[62px]" />
+                {currentLocale === "en" ? (
+                  <Image src={navLogoEn} alt="Allta" className="w-[104px]" />
+                ) : (
+                  <Image src={navLogoKo} alt="올타" className="w-[62px]" />
+                )}
               </Link>
 
               <button
