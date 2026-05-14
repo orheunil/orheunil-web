@@ -66,3 +66,6 @@ export { default as marketChartMobileKo } from "./market-chart-m-ko.png";
 export { default as marketChartEn } from "./market-chart-en.png";
 export { default as marketChartMobileEn } from "./market-chart-m-en.png";
 export { default as whiteDownloadIcon } from "./white-dowload-icon.png";
+
+// FAQ
+export { default as faqArrow } from "./faq-arrow.png";
