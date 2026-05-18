@@ -31,6 +31,18 @@ export const Footer = () => {
     scalable: true,
   });
 
+  const handleRouteAppStore = () => {
+    const userAgent = typeof window !== "undefined" ? navigator.userAgent : "";
+    const isMobile = /Android|iPhone|Mobile/i.test(userAgent);
+
+    if (isMobile) {
+      window.open("https://app.allta.io", "_blank");
+      return;
+    }
+
+    setShowQr(true);
+  };
+
   return (
     <footer className="flex justify-center bg-gray-100 px-[60px]">
       {showQr && (
@@ -107,7 +119,7 @@ export const Footer = () => {
               <p>{t("footer.service.stores")}</p>
 
               <button
-                onClick={() => setShowQr(true)}
+                onClick={handleRouteAppStore}
                 className="text-start cursor-pointer"
               >
                 {t("footer.service.app")}
@@ -122,9 +134,11 @@ export const Footer = () => {
               <Link href={`/${currentLocale}/faq`}>
                 {t("footer.inquiry.faq")}
               </Link>
+
               <Link href={`/${currentLocale}/contact`}>
                 {t("footer.inquiry.partnership")}
               </Link>
+
               <Link href={`/${currentLocale}/ir`}>
                 {t("footer.inquiry.ir")}
               </Link>
