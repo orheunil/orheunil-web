@@ -19,6 +19,7 @@
     },
     "service": {
       "title": "Service",
+      "service": "Service",
       "stores": "Find Stores",
       "app": "Download App"
     },
