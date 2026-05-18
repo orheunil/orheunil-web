@@ -19,6 +19,7 @@
     },
     "service": {
       "title": "서비스",
+      "service": "서비스 소개",
       "stores": "세차장 찾기",
       "app": "앱 다운로드"
     },
