@@ -126,11 +126,6 @@ export const SolutionCalculator = () => {
                 boxShadow: "none",
                 opacity: 1,
               }}
-              activeHandleStyle={{
-                borderWidth: 2,
-                boxShadow: "none",
-                opacity: 1,
-              }}
               onChange={(value) => {
                 if (typeof value === "number") {
                   setStores(value);
@@ -171,11 +166,6 @@ export const SolutionCalculator = () => {
                 marginTop: -9,
                 backgroundColor: colors.gray2,
                 borderColor: colors.main,
-                borderWidth: 2,
-                boxShadow: "none",
-                opacity: 1,
-              }}
-              activeHandleStyle={{
                 borderWidth: 2,
                 boxShadow: "none",
                 opacity: 1,
