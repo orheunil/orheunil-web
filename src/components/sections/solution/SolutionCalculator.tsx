@@ -27,9 +27,7 @@ export const SolutionCalculator = () => {
 
       return `$ ${million.toLocaleString(undefined, {
         maximumFractionDigits: 1,
-      })}${t(
-        "calculator.money.million",
-      )}`;
+      })}${t("calculator.money.million")}`;
     }
 
     if (value >= 1000) {
@@ -90,7 +88,12 @@ export const SolutionCalculator = () => {
         </h1>
 
         <div className="flex flex-col lg:flex-row lg:justify-between w-full p-[24px] md:px-[112px] md:py-[40px] lg:p-[60px] mt-[60px] gap-[24px] md:gap-[40px] lg:gap-[80px] text-[14px] md:text-[16px] bg-gray1 rounded-[28px]">
-          <div className="flex flex-1 flex-col p-[16px] md:p-[40px] bg-white rounded-[16px]">
+          <div
+            className="flex flex-1 flex-col p-[16px] md:p-[40px] bg-white rounded-[16px]"
+            style={{
+              boxShadow: "0 4px 10px 2px rgba(28, 28, 44, 0.2)",
+            }}
+          >
             {/* 매장 수 */}
             <div className="flex justify-between items-center">
               <p>{t("calculator.stores.label")}</p>
@@ -211,8 +214,14 @@ export const SolutionCalculator = () => {
             </div>
           </div>
 
+          {/* 절감액 */}
           <div className="flex flex-1 flex-col justify-center gap-[20px] md:gap-[28px] lg:gap-[60px]">
-            <div className="flex flex-col justify-center items-center w-full lg:w-[395px] h-[200px] lg:h-[250px] text-center bg-white rounded-[16px]">
+            <div
+              className="flex flex-col justify-center items-center w-full lg:w-[395px] h-[200px] lg:h-[250px] text-center bg-white rounded-[16px]"
+              style={{
+                boxShadow: "0 4px 10px 2px rgba(28, 28, 44, 0.2)",
+              }}
+            >
               <p className="text-[14px] md:text-[24px]">
                 {t("calculator.results.savings")}
               </p>
@@ -221,10 +230,17 @@ export const SolutionCalculator = () => {
               </p>
             </div>
 
-            <div className="flex flex-col justify-center items-center w-full lg:w-[395px] h-[200px] lg:h-[250px] text-center bg-white rounded-[16px]">
+            {/* ROI */}
+            <div
+              className="flex flex-col justify-center items-center w-full lg:w-[395px] h-[200px] lg:h-[250px] text-center bg-white rounded-[16px]"
+              style={{
+                boxShadow: "0 4px 10px 2px rgba(28, 28, 44, 0.2)",
+              }}
+            >
               <p className="text-[14px] md:text-[24px]">
                 {t("calculator.results.roi")}
               </p>
+
               <p className="mt-[8px] text-main text-[40px] md:text-[48px] font-bold">
                 {t("calculator.results.approx")} {roi}
                 {t("calculator.results.times")}
