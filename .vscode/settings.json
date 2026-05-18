@@ -27,5 +27,9 @@
   "editor.formatOnSave": true,
   "yaml.schemas": {
     "https://www.artillery.io/schema.json": []
-  }
+  },
+  "i18n-ally.localesPaths": [
+    "src/locales",
+    "src/components/provider/i18n"
+  ]
 }

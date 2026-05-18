@@ -27,6 +27,40 @@
       }
     ]
   },
+  "calculator": {
+    "title": {
+      "line1": "올타 도입 시,",
+      "line2": "얼마나 절감되는지 직접 확인해보세요"
+    },
+    "stores": {
+      "label": "보유 지점 수",
+      "unit": "개",
+      "min": "1개",
+      "max": "50개"
+    },
+    "sales": {
+      "label": "지점당 월 세차 매출",
+      "unit": "원",
+      "min": "500만 원",
+      "max": "5,000만 원"
+    },
+    "people": {
+      "label": "야간 인력",
+      "one": "1명",
+      "two": "2명"
+    },
+    "results": {
+      "savings": "월 절감액",
+      "roi": "ROI",
+      "approx": "약",
+      "times": "배"
+    },
+    "money": {
+      "currency": "원",
+      "eok": "억",
+      "man": "만"
+    }
+  },
   "price": {
     "title": "월 28,000원으로 세차 걱정 끝!",
     "content": {

@@ -27,6 +27,40 @@
       }
     ]
   },
+  "calculator": {
+    "title": {
+      "line1": "With ALLTA,",
+      "line2": "See how much you can save"
+    },
+    "stores": {
+      "label": "Number of Stores",
+      "unit": "stores",
+      "min": "1 store",
+      "max": "50 stores"
+    },
+    "sales": {
+      "label": "Monthly Sales per Store",
+      "unit": "",
+      "min": "$ 4K",
+      "max": "$ 36K"
+    },
+    "people": {
+      "label": "Night Staff",
+      "one": "1",
+      "two": "2"
+    },
+    "results": {
+      "savings": "Monthly Savings",
+      "roi": "ROI",
+      "approx": "About",
+      "times": "x"
+    },
+    "money": {
+      "currency": "$",
+      "thousand": "K",
+      "million": "M"
+    }
+  },
   "price": {
     "title": "Unlimited Car Washes for Just $19/Month!",
     "content": {
