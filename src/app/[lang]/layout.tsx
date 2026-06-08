@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "옳은일 | 모빌리티 케어 파트너",
     description: "당신의 모빌리티 케어 파트너, 옳은일입니다",
-    images: "/images/og-image.png",
+    images: "/meta/og-image.png",
   },
   twitter: {
     title: "옳은일 | 모빌리티 케어 파트너",
