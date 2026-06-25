@@ -109,7 +109,7 @@ export const Footer = () => {
 
             <div className="flex flex-col mt-[16px] gap-[8px] text-gray7">
               <a
-                href="https://www.allta.io"
+                href="https://allta.io"
                 target="_blank"
                 rel="noopener noreferrer"
               >
