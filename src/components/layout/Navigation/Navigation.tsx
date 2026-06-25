@@ -81,7 +81,7 @@ export const Navigation = () => {
                   return (
                     <a
                       key={index}
-                      href="https://www.allta.io"
+                      href="https://allta.io"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
